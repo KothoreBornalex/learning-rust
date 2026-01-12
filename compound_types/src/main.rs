@@ -28,5 +28,17 @@ fn main() {
     println!("Book Slice: {:?}", book_slices);
 
 
+    
 
+    // String vs String Slices (&str)
+    // Strings are Growable, Mutable, Owned string type.
+    let mut stone_cold: String = String::from("Hell, "); // the mut keyword here make it possible
+                                                         // to edit it after creation, with the
+                                                         // push_str fn for exemple !
+    stone_cold.push_str("Yeah!");
+    println!("Stone Cold Say: {}", stone_cold);
+    
+    let string: String = String::from("Hello World!");
+    let slice: &str = &string[6..12];
+    println!("Slice Value: {}", slice);
 }
